@@ -1,6 +1,8 @@
 package pl.borawski.mojagdynia
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,15 +20,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Wstawianie przykładowych danych
-        val dbHelper = DatabaseHelper(context = this)
-        dbHelper.insertData(this, "Plaża 1", 54.5189, 18.5305, true)
-        dbHelper.insertData(this, "Plaża 2", 54.5010, 18.5498, false)
+        val button = findViewById<Button>(R.id.beachesButton)
 
-        // Odczytywanie danych
-        val data = dbHelper.readData(this)
-        data.forEach {
-            println("ID: ${it.id}, Name: ${it.name}, Latitude: ${it.latitude}, Longitude: ${it.longitude}, IsFree: ${it.isFree}")
+        button.setOnClickListener {
+            val intent = Intent(this, BeachActivity::class.java)
+            startActivity(intent)
         }
 
     }

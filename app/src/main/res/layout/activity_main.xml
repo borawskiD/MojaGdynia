@@ -33,21 +33,21 @@
             android:text="Plaże" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/museumButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:text="Muzea" />
 
         <Button
-            android:id="@+id/TicketCalculator"
+            android:id="@+id/ticketButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:text="Kalkulator biletowy" />
 
         <Button
-            android:id="@+id/ContactButton"
+            android:id="@+id/contactButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
