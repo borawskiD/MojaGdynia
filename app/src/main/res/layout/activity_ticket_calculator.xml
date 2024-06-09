@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -20,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Bilet jednorazowy" />
+        android:text="@string/OneTimeTicket" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,20 +28,21 @@
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/edit1"
+            android:id="@+id/oneTimeFullEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:layout_weight="0.3"
             android:ems="10"
-            android:inputType="number"
-            android:layout_marginEnd="10dp" />
+            android:hint="@string/Amount"
+            android:inputType="number" />
 
         <TextView
-            android:id="@+id/desc1"
+            android:id="@+id/oneTimeFullText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="Bez zniżek"
+            android:text="@string/WithoutDiscount"
             android:layout_marginStart="10dp" />
     </LinearLayout>
 
@@ -53,21 +53,22 @@
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/edit2"
+            android:id="@+id/oneTimeDiscEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:layout_weight="0.3"
             android:ems="10"
-            android:inputType="number"
-            android:layout_marginEnd="10dp" />
+            android:hint="@string/Amount"
+            android:inputType="number" />
 
         <TextView
-            android:id="@+id/desc2"
+            android:id="@+id/oneTimeDiscText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_weight="0.7"
-            android:text="Bez zniżek"
-            android:layout_marginStart="10dp" />
+            android:text="@string/DiscountText" />
     </LinearLayout>
 
     <!-- Dodaj kolejne pary EditText i TextView z opisami zniżek tutaj -->
@@ -77,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Bilet 75-minutowy" />
+        android:text="@string/LongTermTicketText" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,21 +87,23 @@
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/edit3"
+            android:id="@+id/longTimeFullEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:layout_weight="0.3"
             android:ems="10"
-            android:inputType="number"
-            android:layout_marginEnd="10dp" />
+            android:hint="@string/Amount"
+            android:inputType="number" />
 
         <TextView
-            android:id="@+id/desc3"
+            android:id="@+id/longTimeFullText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_weight="0.7"
-            android:text="Znizka 50%"
-            android:layout_marginStart="10dp" />
+            android:text="@string/WithoutDiscount"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -110,20 +113,21 @@
         android:layout_margin="10dp">
 
         <EditText
-            android:id="@+id/edit4"
+            android:id="@+id/longTimeDiscEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:layout_weight="0.3"
             android:ems="10"
-            android:inputType="number"
-            android:layout_marginEnd="10dp" />
+            android:hint="@string/Amount"
+            android:inputType="number" />
 
         <TextView
-            android:id="@+id/desc4"
+            android:id="@+id/longTimeDiscText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:text="Znizka 50%"
+            android:hint="@string/Amount"
             android:layout_marginStart="10dp" />
     </LinearLayout>
 
@@ -131,14 +135,16 @@
         android:id="@+id/priceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Oblicz cene"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:onClick="calcPrice"
+        android:text="@string/CalcPriceButton" />
 
     <TextView
         android:id="@+id/priceScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cena:"
-        android:layout_marginTop="16dp" />
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Price"
+        android:textSize="24sp" />
 
 </LinearLayout>

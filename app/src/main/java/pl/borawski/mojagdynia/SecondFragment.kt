@@ -33,17 +33,11 @@ import pl.borawski.mojagdynia.databinding.FragmentSecondBinding
  */
 class SecondFragment : Fragment() {
     private var _binding: FragmentSecondBinding? = null
-
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var locationCallback: LocationCallback
-
     private var myLatitude = 0.0
     private var myLongitude = 0.0
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,10 +47,8 @@ class SecondFragment : Fragment() {
 
         if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION)
             != PackageManager.PERMISSION_GRANTED) {
-            println("BRAK UPRAWNIEN")
             ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1)
         } else {
-            println("UPRAWNIENIA GIT")
             getLastKnownLocation()
         }
 
@@ -76,10 +68,9 @@ class SecondFragment : Fragment() {
                 val location: Location = locationResult.lastLocation!!
                 myLatitude = location.latitude
                 myLongitude = location.longitude
-                println("Latitude: $myLatitude, Longitude: $myLongitude")
                 if (_binding != null) {
                     updateTable()
-                }                // Możesz teraz użyć współrzędnych do dalszych obliczeń
+                }
             }
         }
 
@@ -91,23 +82,22 @@ class SecondFragment : Fragment() {
 
     private fun updateTable() {
         val dbHelper = DatabaseHelper(context = requireContext())
-        // Odczytywanie danych
         val data = dbHelper.readAttractionData(requireContext())
         val tableData = mutableListOf<List<Any>>()
-        val coordinates = mutableListOf<Pair<Double, Double>>()  // Lista do przechowywania współrzędnych
+        val coordinates = mutableListOf<Pair<Double, Double>>()
         data.forEach {
             val distance = calculateDistance(myLatitude, myLongitude, it.latitude, it.longitude) / 1000.0 //[km]
             val free = if(it.isFree) "Tak" else "Nie"
             tableData.add(listOf(it.name, it.address, free, distance))
-            coordinates.add(Pair(it.latitude, it.longitude))  // Dodanie współrzędnych do listy
+            coordinates.add(Pair(it.latitude, it.longitude))
         }
 
         val tableLayout = binding.root.findViewById<TableLayout>(R.id.attractionsTable)
-        val headerRow = tableLayout.getChildAt(0) as TableRow // Save the header row
+        val headerRow = tableLayout.getChildAt(0) as TableRow
         tableLayout.removeAllViews()
-        tableLayout.addView(headerRow) // Add the header row back
+        tableLayout.addView(headerRow)
 
-        var counter = 0  // Resetowanie licznika przed iteracją po tableData
+        var counter = 0
         for (row in tableData) {
             val tableRow = TableRow(requireContext())
             for ((index, cell) in row.withIndex()) {
@@ -119,7 +109,6 @@ class SecondFragment : Fragment() {
                     layoutParams = TableRow.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
                     setBackgroundResource(R.drawable.cell_border)
                     if (index == 1 && counter < coordinates.size) {
-                        // Capture the current value of counter
                         val currentCounter = counter
                         println("Counter: $currentCounter")
                         println(coordinates[currentCounter])
@@ -145,8 +134,7 @@ class SecondFragment : Fragment() {
                 TableLayout.LayoutParams.WRAP_CONTENT
             )
             tableLayout.addView(tableRow)
-            counter++  // Zwiększanie licznika po dodaniu wiersza do tabeli
-            println("$counter updated!")
+            counter++
         }
 
         counter = 0
@@ -170,9 +158,7 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val binding = FragmentSecondBinding.bind(view)
-
         binding.buttonSecond.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }

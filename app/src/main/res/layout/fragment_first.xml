@@ -42,28 +42,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Nazwa"
+                    android:text="@string/Name"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Adres"
+                    android:text="@string/address"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Darmowe?"
+                    android:text="@string/free"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Odległość [km]"
+                    android:text="@string/distance"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
             </TableRow>

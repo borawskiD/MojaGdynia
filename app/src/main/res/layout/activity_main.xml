@@ -32,28 +32,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="Plaże i atrakcje" />
+            android:text="@string/beachesTextButton" />
 
         <Button
             android:id="@+id/aboutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="O mieście" />
+            android:text="@string/CityDescriptionButton" />
 
         <Button
             android:id="@+id/ticketButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="Kalkulator biletowy" />
+            android:text="@string/TicketCalculatorButton" />
 
         <Button
             android:id="@+id/contactButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="Kontakt" />
+            android:text="@string/ContactNameButton" />
 
     </LinearLayout>
 

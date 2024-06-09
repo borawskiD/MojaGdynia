@@ -34,20 +34,12 @@ class BeachActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityBeachBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
-
         val navController = findNavController(R.id.nav_host_fragment_content_beach)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-        // Dane do wyświetlenia w tabeli
-
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -5,12 +5,49 @@
     <string name="second_fragment_label">Spis atrakcji z lokalizacjami</string>
     <string name="next">Przejdź do atrakcji</string>
     <string name="previous">Wróć do plaż</string>
-
     <string name="gdynia_description">
-        Gdynia to polskie miasto położone nad Morzem Bałtyckim w województwie pomorskim. Jest jednym z głównych portów morskich w kraju, jak również częścią Trójmiasta, obejmującego też Gdańsk i Sopot. Razem tworzą one dynamiczny obszar metropolitalny o dużym znaczeniu gospodarczym i turystycznym. Gdynia ma bogatą historię jako młode miasto, które zostało założone w 1926 roku. Została zaprojektowana i zbudowana jako nowoczesny port i ośrodek przemysłowy. Jest ważnym centrum gospodarczym, zwłaszcza dla sektora morskiego. Port Gdynia obsługuje zarówno ruch towarowy, jak i pasażerski, stanowiąc ważny węzeł komunikacyjny. Miasto jest także znane z rozwoju przemysłu stoczniowego. Wiele firm, w tym międzynarodowych, ma swoje siedziby lub oddziały w Gdyni.
-Gdynia oferuje piękne plaże i przystanie jachtowe, co przyciąga zarówno mieszkańców, jak i turystów. Promenada nadmorska, zwana Skwerem Kościuszki, jest popularnym miejscem spacerów i rekreacji. Miasto ma wiele atrakcji kulturalnych, takich jak Muzeum Emigracji, Muzeum Marynarki Wojennej, czy Teatr Muzyczny im. Danuty Baduszkowej. W Gdyni co roku odbywa się Międzynarodowy Festiwal Filmowy, promujący polską kinematografię.
-    Gdynia, jako jedno z nielicznych miast, ma bezpośredni dostęp do morza. Z morzem łączy się praktycznie cała linia Gdyni, od Orłowa po Babie Doły. Jedne plaże należą do tych bardziej kameralnych, inne do tych uczęszczanych częściej. Coś z czego Gdynia jest znana, to plaża w ścisłym centrum. Przy niej bez problemu znajdziemy ścieżki rowerowe, nadmorskie knajpki, atrakcje wodne, jak również miejsca idealne do spacerów, czy po prostu pikinkowania i przesiadywania.
-Gdynia to też aktywność.
-Gdynia systematycznie dba o ścieżki rowerowe, powiększa ich zasięgi, jak również urozmaica różnorakie wydarzenia sportowe, od tych amatorskich, po zawodowe. Gdynia jest gospodarzem wielu imprez i festiwali, zarówno lokalnych, jak i międzynarodowych. Na przykład, festiwal Open'er, Międzynarodowy Festiwal Filmowy w Gdyni czy Festiwal Design Days, przyciągają zarówno mieszkańców, jak i turystów.
+        Gdynia to polskie miasto położone nad Morzem Bałtyckim w województwie pomorskim.
+        Jest jednym z głównych portów morskich w kraju, jak również częścią Trójmiasta, obejmującego też Gdańsk i Sopot.
+        Razem tworzą one dynamiczny obszar metropolitalny o dużym znaczeniu gospodarczym i turystycznym.
+        Gdynia ma bogatą historię jako młode miasto, które zostało założone w 1926 roku.
+        Została zaprojektowana i zbudowana jako nowoczesny port i ośrodek przemysłowy.
+        Jest ważnym centrum gospodarczym, zwłaszcza dla sektora morskiego.
+        Port Gdynia obsługuje zarówno ruch towarowy, jak i pasażerski, stanowiąc ważny węzeł komunikacyjny.
+        Miasto jest także znane z rozwoju przemysłu stoczniowego.
+        Wiele firm, w tym międzynarodowych, ma swoje siedziby lub oddziały w Gdyni.
+        Gdynia oferuje piękne plaże i przystanie jachtowe, co przyciąga zarówno mieszkańców, jak i turystów.
+        Promenada nadmorska, zwana Skwerem Kościuszki, jest popularnym miejscem spacerów i rekreacji.
+        Miasto ma wiele atrakcji kulturalnych, takich jak Muzeum Emigracji, Muzeum Marynarki Wojennej, czy Teatr Muzyczny im. Danuty Baduszkowej.
+        W Gdyni co roku odbywa się Międzynarodowy Festiwal Filmowy, promujący polską kinematografię.
+        Gdynia, jako jedno z nielicznych miast, ma bezpośredni dostęp do morza.
+        Z morzem łączy się praktycznie cała linia Gdyni, od Orłowa po Babie Doły.
+        Jedne plaże należą do tych bardziej kameralnych, inne do tych uczęszczanych częściej.
+        Coś, z czego Gdynia jest znana, to plaża w ścisłym centrum.
+        Przy niej bez problemu znajdziemy ścieżki rowerowe, nadmorskie knajpki, atrakcje wodne, jak również miejsca idealne do spacerów,
+        czy po prostu piknikowania i przesiadywania.
+        Gdynia to też aktywność.
+        Gdynia systematycznie dba o ścieżki rowerowe, powiększa ich zasięgi, jak również urozmaica różnorakie wydarzenia sportowe,
+        od tych amatorskich, po zawodowe.
+        Gdynia jest gospodarzem wielu imprez i festiwali, zarówno lokalnych, jak i międzynarodowych.
+        Na przykład, festiwal Opener, Międzynarodowy Festiwal Filmowy w Gdyni czy Festiwal Design Days, przyciągają zarówno mieszkańców, jak i turystów.
     </string>
+    <string name="gdynia">Gdynia</string>
+    <string name="author">Autor: Dominik Borawski 215IC B1.</string>
+    <string name="mail">dborawski02@gmail.com</string>
+    <string name="subject">Aplikacje mobilne</string>
+    <string name="beachesTextButton">Plaże i atrakcje</string>
+    <string name="CityDescriptionButton">O mieście</string>
+    <string name="TicketCalculatorButton">Kalkulator biletowy</string>
+    <string name="ContactNameButton">Kontakt</string>
+    <string name="OneTimeTicket">Bilet jednorazowy</string>
+    <string name="Amount">Liczba</string>
+    <string name="WithoutDiscount">Bez zniżek</string>
+    <string name="CalcPriceButton">Oblicz cene</string>
+    <string name="Price">Cena:</string>
+    <string name="LongTermTicketText">Bilet 75-minutowy</string>
+    <string name="DiscountText">Zniżka 50%</string>
+    <string name="Name">Nazwa</string>
+    <string name="address">Adres</string>
+    <string name="free">Darmowe?</string>
+    <string name="distance">Odległość [km]</string>
 </resources>

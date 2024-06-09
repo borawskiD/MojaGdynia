@@ -50,6 +50,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val calculatorButton = findViewById<Button>(R.id.ticketButton)
+        calculatorButton.setOnClickListener {
+            val intent = Intent(this, TicketCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+
+        val contactButton = findViewById<Button>(R.id.contactButton)
+        contactButton.setOnClickListener {
+            val intent = Intent(this, ContactActivity::class.java)
+            startActivity(intent)
+        }
+
+
         val dbHelper = DatabaseHelper(context = this)
         dbHelper.clearAndPopulateDatabase()
 

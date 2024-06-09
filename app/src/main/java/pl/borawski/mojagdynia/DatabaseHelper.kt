@@ -26,31 +26,6 @@ class DatabaseHelper(context: Context) :
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME_ATTRACTIONS")
         onCreate(db)
     }
-
-    fun insertBeach(context: Context, name: String, address: String, latitude: Double, longitude: Double, isFree: Boolean): Long {
-        val db = writableDatabase
-        val values = ContentValues().apply {
-            put(COLUMN_NAME, name)
-            put(COLUMN_ADDRESS, address)
-            put(COLUMN_LATITUDE, latitude)
-            put(COLUMN_LONGITUDE, longitude)
-            put(COLUMN_IS_FREE, if (isFree) 1 else 0)
-        }
-        return db.insert(TABLE_NAME_BEACHES, null, values)
-    }
-
-    fun insertAttraction(context: Context, name: String, address: String, latitude: Double, longitude: Double, isFree: Boolean): Long {
-        val db = writableDatabase
-        val values = ContentValues().apply {
-            put(COLUMN_NAME, name)
-            put(COLUMN_ADDRESS, address)
-            put(COLUMN_LATITUDE, latitude)
-            put(COLUMN_LONGITUDE, longitude)
-            put(COLUMN_IS_FREE, if (isFree) 1 else 0)
-        }
-        return db.insert(TABLE_NAME_ATTRACTIONS, null, values)
-    }
-
     fun clearAndPopulateDatabase() {
         val db = writableDatabase
         db.execSQL("DELETE FROM $TABLE_NAME_BEACHES")
