@@ -16,20 +16,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@id/textview_first"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Dupa"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <TableLayout
+            android:id="@+id/beachTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/button_first" />
+            app:layout_constraintStart_toStartOf="@id/button_first"
+            app:layout_constraintTop_toBottomOf="@+id/button_first"
+            android:stretchColumns="0,1,2,3,4"
+            >
+
+            <!-- Example header row -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Nazwa"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Adres"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Darmowe?"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Odległość [km]"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

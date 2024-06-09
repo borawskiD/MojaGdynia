@@ -30,14 +30,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="Plaże" />
+            android:text="Plaże i atrakcje" />
 
         <Button
             android:id="@+id/museumButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="Muzea" />
+            android:text="O mieście" />
 
         <Button
             android:id="@+id/ticketButton"
