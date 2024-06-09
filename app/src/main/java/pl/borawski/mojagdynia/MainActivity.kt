@@ -1,5 +1,6 @@
 package pl.borawski.mojagdynia
 
+import DatabaseHelper
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -36,22 +37,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val button = findViewById<Button>(R.id.beachesButton)
+        val beachesButton = findViewById<Button>(R.id.beachesButton)
 
-        button.setOnClickListener {
+        beachesButton.setOnClickListener {
             val intent = Intent(this, BeachActivity::class.java)
             startActivity(intent)
         }
-        // Wstawianie przykładowych danych
+
+        val aboutButton = findViewById<Button>(R.id.aboutButton)
+        aboutButton.setOnClickListener {
+            val intent = Intent(this, AboutCityActivity::class.java)
+            startActivity(intent)
+        }
+
         val dbHelper = DatabaseHelper(context = this)
         dbHelper.clearAndPopulateDatabase()
-        //dbHelper.insertData(this, "Plaża 1", "Adres 1",54.5189, 18.5305, true)
-        //dbHelper.insertData(this, "Plaża 2", "Adres 2",54.5010, 18.5498, false)
 
     }
-    companion object {
-        private const val LOCATION_PERMISSION_REQUEST_CODE = 1
-    }
-
 
 }

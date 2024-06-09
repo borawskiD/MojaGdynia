@@ -1,5 +1,6 @@
 package pl.borawski.mojagdynia
 
+import DatabaseHelper
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -91,7 +92,7 @@ class FirstFragment : Fragment() {
     private fun updateTable() {
         val dbHelper = DatabaseHelper(context = requireContext())
         // Odczytywanie danych
-        val data = dbHelper.readData(requireContext())
+        val data = dbHelper.readBeachData(requireContext())
         val tableData = mutableListOf<List<Any>>()
         val coordinates = mutableListOf<Pair<Double, Double>>()  // Lista do przechowywania współrzędnych
         data.forEach {
