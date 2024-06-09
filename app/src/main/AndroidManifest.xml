@@ -22,6 +22,9 @@
         android:theme="@style/Theme.MojaGdynia"
         tools:targetApi="31">
         <activity
+            android:name=".TicketCalculatorActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutCityActivity"
             android:exported="false" />
         <activity
